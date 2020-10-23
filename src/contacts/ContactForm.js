@@ -27,7 +27,7 @@ export default function ContactForm(props) {
 
         <div className="flex flex-row mb-2 items-stretch justify-between">
           <label className="text-lg">E-mail</label>
-          <input type="text" className="p-2 rounded text-gray-600 text-lg " maxLength={50} onChange={change_field("email")} />
+          <input type="email" className="p-2 rounded text-gray-600 text-lg " maxLength={50} onChange={change_field("email")} />
         </div>
 
         <div className="flex flex-row items-stretch mb-2 justify-between">
@@ -50,11 +50,11 @@ export default function ContactForm(props) {
 
 function valid_contact(data){
   if(data.name === ""){
-    alert("SEM NOME");
+    alert("O nome é obrigatório");
     return false
   }
   if(data.empresa === ""){
-    alert("SEM NOME DA EMPRESA");
+    alert("A empresa é obrigatório");
     return false
   }
   return true
